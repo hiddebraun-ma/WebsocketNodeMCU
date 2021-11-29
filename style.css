@@ -1,0 +1,42 @@
+#status {
+    display: inline-block;
+    background-color: red;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#status button {
+    background-color: white;
+    border: 1px solid #000000;
+    color: #333333;
+}
+
+#disconnect, #controls {
+    display: none;
+}
+
+#status.connected {
+    background-color: green;
+}
+
+#controls, #messages {
+    background-color: lightgrey;
+    padding: 10px;
+    border: 1px solid #333333;
+    flex-grow: 1;
+}
+
+#controls {
+    margin-right: 20px;
+}
+
+.connected #controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
