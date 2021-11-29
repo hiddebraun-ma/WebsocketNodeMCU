@@ -40,10 +40,7 @@ const disconnectFromServer = () => {
 
 const onSocketOpen = (event) => {
     console.log('Socket open:', event);
-    status.className = 'connected';
-    connectBtn.style.display = 'none';
-    disconnectBtn.style.display = 'flex';
-    controls.style.display = 'block';
+    document.body.className = 'connected';
     logMessage("Connected to " + event.currentTarget.url);
 }
 
@@ -59,15 +56,12 @@ const onSocketError = (event) => {
 
 const onSocketClosed = (event) => {
     console.log('Socket closed', event);
-    status.className = null;
-    connectBtn.style.display = 'inline';
-    disconnectBtn.style.display = 'none';
-    controls.style.display = 'none';
+    document.body.className = null;
     logMessage("Disconnected from " + event.currentTarget.url);
 }
 
 const logMessage = (message) => {
-    messages.innerHTML = message + '<br/>' + messages.innerHTML;
+    messages.innerHTML = `<p>${message}</p>` + messages.innerHTML;
 }
 
 const toggleLed = () => {
