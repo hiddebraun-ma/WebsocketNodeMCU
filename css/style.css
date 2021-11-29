@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+#status {
+    display: inline-block;
+    background-color: red;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+#status button {
+    background-color: white;
+    border: 1px solid #000000;
+    color: #333333;
+}
+
+#disconnect, #controls button {
+    display: none;
+}
+
+.connected #status {
+    background-color: green;
+}
+
+.connected #connect {
+    display: none;
+}
+
+.connected #controls button {
+    display: inline-block;
+}
+
+.connected #disconnect {
+    display: inline-block;
+}
+
+#controls, #messages {
+    background-color: lightgrey;
+    height: 200px;
+    border: 1px solid #333333;
+    flex-grow: 1;
+}
+
+#messages {
+    overflow-y: scroll;
+}
+
+#controls {
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.connected #controls {
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#messages p {
+    margin: 0;
+    padding: 2px 5px;
+}
+
+#messages p:nth-child(odd) {
+    background-color: #EFEFEF;
+}

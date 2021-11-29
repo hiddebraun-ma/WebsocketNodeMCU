@@ -20,3 +20,16 @@ De webpagina is de client. De NodeMCU start een Websocket server. Zo kun je over
 6. KLik op connect (kijk in console voor extra logs)
 7. Klik op Toggle Led (er wordt een JSON string gestuurd naar de NodeMCU)
 8. De NodeMCU leest het commando en voert een stukje code uit die ingebouwde de Led aan/uit zet.
+
+### Web pagina
+
+![Screenshot](screenshot.png)
+
+### Arduino Serial monitor
+
+![Arduino Serial monitor](serial-monitor-arduino.png)
+
+### Resultaat
+
+![Resultaat](resultaat.gif)
+
